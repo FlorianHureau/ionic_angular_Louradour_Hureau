@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Randonee } from '../../model/randoneeModel';
 
 /**
  * Generated class for the DetailPage page.
@@ -8,14 +9,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({name:"randoneeDetail"})
 @Component({
   selector: 'page-detail',
   templateUrl: 'detail.html',
 })
 export class DetailPage {
 
+  private randonee : Randonee;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.randonee=this.navParams.get('randonee');
   }
 
   ionViewDidLoad() {

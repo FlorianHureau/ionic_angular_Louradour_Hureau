@@ -16,7 +16,7 @@
 <ion-content padding>
 <ul>
   <li *ngFor="let item of maListe" >
-    {{item}}
+    <button ion-button (click)="gotoDetailRandonee(item)">{{item.lieuDepart}}/{{item.lieuArrivee}}</button>
   </li>
 </ul>
 </ion-content>
