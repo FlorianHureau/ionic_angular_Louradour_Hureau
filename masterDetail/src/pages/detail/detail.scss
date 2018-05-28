@@ -1,16 +1,21 @@
-.Details{
-    border: 3px solid black;
-    border-radius: 5px;
-    box-shadow: 6px 6px 0px black;
-}
-
 h1{
     text-align: center;
     font-size: 35px;
     font-style: italic;
     text-decoration: underline;
 }
-
-strong{
-    font-weight: bold;
+.card{
+    background-color: color($colors, light, base);;
+    border-radius: 15px;
+}
+.card-content{
+    background-color: color($colors, light, base);
+}
+.ion-item{
+    background: color($colors, lightinnercard, base);
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.body{
+    background-color: color($colors, innercard, base);
 }
