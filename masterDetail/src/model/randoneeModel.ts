@@ -4,6 +4,7 @@ export class Randonee {
 
     private lieuDepart:Lieu;
     private lieuArrivee:Lieu;
+    private Etapes:Array<Lieu>;
     private distance:number;
     private duree:number;
 
@@ -20,6 +21,10 @@ export class Randonee {
 
     getLieuArrivee(){
         return this.lieuArrivee;
+    }
+
+    getEtape(){
+
     }
 
     getDuree(){

@@ -3,13 +3,16 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+
 import { AgmCoreModule } from '@agm/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { Geolocation } from '@ionic-native/geolocation';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
 import { RandoneeRepository } from '../repository/randoneeRepository';
 import { LieuRepository } from '../repository/lieuRepository';
+import { GeolocalisationProvider } from '../providers/geolocalisation/geolocalisation';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { LieuRepository } from '../repository/lieuRepository';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RandoneeRepository,
-    LieuRepository
+    LieuRepository,
+    GeolocalisationProvider,
+    Geolocation
   ]
 })
 export class AppModule {}

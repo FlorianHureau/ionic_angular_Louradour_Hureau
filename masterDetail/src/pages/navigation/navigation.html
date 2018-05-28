@@ -14,5 +14,9 @@
 
 
 <ion-content padding>
-
+  <agm-map [latitude]= latitudeUser [longitude]= longitudeUser>
+    <agm-marker [latitude]= depart.latitude [longitude]= depart.longitude ></agm-marker>
+    <agm-marker [latitude]= arrive.latitude [longitude]= arrive.longitude></agm-marker>
+    <agm-marker [latitude]= latitudeUser [longitude]= longitudeUser></agm-marker>
+  </agm-map>
 </ion-content>

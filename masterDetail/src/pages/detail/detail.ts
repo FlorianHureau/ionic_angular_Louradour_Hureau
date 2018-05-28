@@ -22,6 +22,10 @@ export class DetailPage {
     this.randonee=this.navParams.get('randonee');
   }
 
+  gotoRandoneeCour(){
+    this.navCtrl.push('navigationRand',{randoneeCour:this.randonee})
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
   }
