@@ -13,10 +13,9 @@
 </ion-header>
 
 
-<ion-content padding>
-<ul>
-  <li *ngFor="let item of maListe" >
-    <button ion-button (click)="gotoDetailRandonee(item)">{{item.lieuDepart.ville}}/{{item.lieuArrivee.ville}}</button>
-  </li>
-</ul>
+<ion-content padding class='body'>
+  <ion-list class='listeRandonnees'>
+    <button  ion-item *ngFor="let item of maListe" (click)="gotoDetailRandonee(item)">{{item.lieuDepart.ville}}/{{item.lieuArrivee.ville}}</button>
+    <br/>
+  </ion-list>
 </ion-content>

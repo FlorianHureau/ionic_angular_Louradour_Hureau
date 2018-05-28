@@ -13,14 +13,37 @@
 </ion-header>
 
 
-<ion-content padding>
 
-  <div class="Details">
-    <h1>Détails de la randonnée:</h1>
-    <p><strong>Lieux d'Arrivée:</strong> {{randonee.lieuArrivee.ville}}</p><br/>
-    <p><strong>Lieux de Départ:</strong> {{randonee.lieuDepart.ville}} </p><br/>
-    <p><strong>Durée:</strong> {{randonee.duree}} heure</p><br/>
-    <p><strong>Distance:</strong> {{randonee.distance}} km</p><br/>
-    <button ion-button (click)="gotoRandoneeCour()">Randonnée en cour</button>
-  </div>
+<ion-content padding class='body'>
+  <ion-card class='card'>
+    <ion-card-header>
+      <h1>Détails de la randonnée:</h1>
+    </ion-card-header>
+    <ion-card-content class='card-content'>
+      <ion-item class='ion-item'>
+          <ion-icon name='walk' item-start large></ion-icon>
+          <h2>Départ:</h2>
+          <p>{{randonee.lieuDepart.ville}}</p>
+        </ion-item>
+        <ion-item class='ion-item'>
+            <ion-icon name='flag' item-start large></ion-icon>
+            <h2>Arrivée:</h2>
+            <p>{{randonee.lieuArrivee.ville}}</p>
+        </ion-item>
+        <ion-item class='ion-item'>
+          <span item-left>
+            <ion-icon name='stopwatch' item-start large></ion-icon>
+            {{randonee.duree}} minutes
+          </span>
+          <span item-left>
+            <ion-icon name='bicycle' item-start large></ion-icon>
+            {{randonee.distance}} km
+          </span>
+          <button ion-button icon-left clear item-end (click)="gotoRandoneeCour()">
+            <ion-icon name="navigate"></ion-icon>
+            Start
+          </button>
+        </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
