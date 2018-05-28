@@ -1,11 +1,13 @@
+import { Lieu } from '../model/lieuModel'
+
 export class Randonee {
 
-    private lieuDepart:string;
-    private lieuArrivee:string;
+    private lieuDepart:Lieu;
+    private lieuArrivee:Lieu;
     private distance:number;
     private duree:number;
 
-    constructor(depart:string, arrivee:string, distance:number, duree:number){
+    constructor(depart:Lieu, arrivee:Lieu, distance:number, duree:number){
         this.distance=distance;
         this.duree=duree;
         this.lieuArrivee=arrivee;
