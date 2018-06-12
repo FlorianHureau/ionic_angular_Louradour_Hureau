@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="body">
   <agm-map [latitude]= positionUser[0] [longitude]= positionUser[1]>
     <agm-marker [latitude]= depart.latitude [longitude]= depart.longitude ></agm-marker>
     <div *ngFor="let etape of etapes" >

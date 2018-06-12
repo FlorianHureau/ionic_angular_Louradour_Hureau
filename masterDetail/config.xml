@@ -3,7 +3,7 @@
     <name>helloworld</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.190.1:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -84,6 +84,7 @@
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
+    <engine name="android" spec="~7.0.0" />
     <allow-navigation href="http://192.168.190.1:8100" />
-    <engine name="android" spec="7.0.0" />
+    <allow-navigation href="http://172.27.64.67:8100" />
 </widget>
