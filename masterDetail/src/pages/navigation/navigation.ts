@@ -19,13 +19,17 @@ export class NavigationPage {
   
   private depart : Lieu;
   private arrive : Lieu;
-  private latitudeUser : number;
-  private LongitudeUser : number;
+  private etapes : Array<Lieu>;
+  private positionUser = [0,0];
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public geo:GeolocalisationProvider) {
+    
     let randonee=this.navParams.get('randoneeCour');
     this.arrive = randonee.lieuArrivee;
     this.depart = randonee.lieuDepart;
+    this.etapes = randonee.etapes;
+    geo.getLocation(this.positionUser);
   }
 
   ionViewDidLoad() {

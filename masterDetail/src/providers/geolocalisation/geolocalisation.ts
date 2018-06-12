@@ -4,27 +4,18 @@ import { Geolocation } from '@ionic-native/geolocation';
 @Injectable()
 export class GeolocalisationProvider {
 
-  private latitude:number;
-  private longitude:number;
 
-  constructor(private geo:Geolocation) {
-    this.RefreshCoordinate();
-  }
+  getLocation(position){
+    let geo = new Geolocation();
+    geo.getCurrentPosition().then((resp)=> {
+        position[0] = resp.coords.latitude;
+        position[1] = resp.coords.longitude;
+    });
 
-  public RefreshCoordinate(){
-    return this.geo.getCurrentPosition().then((resp) => {
-        this.latitude = resp.coords.latitude;
-        this.longitude = resp.coords.longitude;
-     }).catch((error) => {
-       console.log('Error getting location', error);
-     });
-  }
+    geo.watchPosition().subscribe((data) => {
+        position[0] = data.coords.latitude;
+        position[1] = data.coords.longitude;
+    });
+}
 
-  public getLatitude(){
-    return this.latitude;
-  }
-
-  public getLongitude(){
-    return this.longitude;
-  }
 }
