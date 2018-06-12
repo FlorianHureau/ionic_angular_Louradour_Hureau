@@ -21,5 +21,8 @@
     </div>
     <agm-marker [latitude]= arrive.latitude [longitude]= arrive.longitude></agm-marker>
     <agm-marker [latitude]= positionUser[0] [longitude]= positionUser[1]></agm-marker>
+    <div *ngFor="let trace of tracer">
+        <agm-direction [origin]='{ lat: trace[0], lng: trace[1] }' [destination]='{ lat: trace[2], lng: trace[3] }'></agm-direction>
+    </div>
   </agm-map>
 </ion-content>
