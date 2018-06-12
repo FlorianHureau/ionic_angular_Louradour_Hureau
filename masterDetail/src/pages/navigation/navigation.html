@@ -14,9 +14,12 @@
 
 
 <ion-content padding>
-  <agm-map [latitude]= latitudeUser [longitude]= longitudeUser>
+  <agm-map [latitude]= positionUser[0] [longitude]= positionUser[1]>
     <agm-marker [latitude]= depart.latitude [longitude]= depart.longitude ></agm-marker>
+    <div *ngFor="let etape of etapes" >
+      <agm-marker [latitude]= etape.latitude [longitude]= etape.longitude></agm-marker>
+    </div>
     <agm-marker [latitude]= arrive.latitude [longitude]= arrive.longitude></agm-marker>
-    <agm-marker [latitude]= latitudeUser [longitude]= longitudeUser></agm-marker>
+    <agm-marker [latitude]= positionUser[0] [longitude]= positionUser[1]></agm-marker>
   </agm-map>
 </ion-content>

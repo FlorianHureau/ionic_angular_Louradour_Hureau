@@ -4,15 +4,16 @@ export class Randonee {
 
     private lieuDepart:Lieu;
     private lieuArrivee:Lieu;
-    private Etapes:Array<Lieu>;
+    private etapes:Array<Lieu>;
     private distance:number;
     private duree:number;
 
-    constructor(depart:Lieu, arrivee:Lieu, distance:number, duree:number){
+    constructor(depart:Lieu, arrivee:Lieu, etapes:Array<Lieu>, distance:number, duree:number){
         this.distance=distance;
         this.duree=duree;
         this.lieuArrivee=arrivee;
         this.lieuDepart=depart;
+        this.etapes=etapes;
     }
 
     getLieuDepart(){
@@ -24,7 +25,7 @@ export class Randonee {
     }
 
     getEtape(){
-
+        return this.etapes;
     }
 
     getDuree(){

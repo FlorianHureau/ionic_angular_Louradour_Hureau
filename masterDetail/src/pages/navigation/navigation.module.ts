@@ -4,6 +4,7 @@ import { NavigationPage } from './navigation';
 import { AgmCoreModule } from '@agm/core';
 
 import { Component } from '@angular/core';
+import { GeolocalisationProvider } from '../../providers/geolocalisation/geolocalisation';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,9 @@ import { Component } from '@angular/core';
       apiKey: 'AIzaSyAF9w5Gw-o5L5et8ywyS_dfntBPaRRwzmA'
     }),
   ],
+  providers:[
+    GeolocalisationProvider,
+  ]
 })
 @Component({
   selector: 'app-root',
