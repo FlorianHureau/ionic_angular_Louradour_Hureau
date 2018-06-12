@@ -5,17 +5,17 @@ h1{
     text-decoration: underline;
 }
 .card{
-    background-color: color($colors, light, base);;
+    background-color: color($colors, lightinnercard, base);;
     border-radius: 15px;
 }
 .card-content{
-    background-color: color($colors, light, base);
+    background-color: color($colors, lightinnercard, base);
 }
 .ion-item{
-    background: color($colors, lightinnercard, base);
+    background: color($colors, color3, base);
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 }
 .body{
-    background-color: color($colors, innercard, base);
+    background-color: color($colors, lightinnercard, base);
 }
