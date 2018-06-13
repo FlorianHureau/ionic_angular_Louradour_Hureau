@@ -5,6 +5,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { Component } from '@angular/core';
 import { GeolocalisationProvider } from '../../providers/geolocalisation/geolocalisation';
+import {AgmDirectionModule} from "agm-direction";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { GeolocalisationProvider } from '../../providers/geolocalisation/geoloca
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAF9w5Gw-o5L5et8ywyS_dfntBPaRRwzmA'
     }),
+    AgmDirectionModule,
   ],
   providers:[
     GeolocalisationProvider,
