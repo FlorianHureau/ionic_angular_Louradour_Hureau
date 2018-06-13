@@ -5,4 +5,13 @@
 .listeRandonnees{
     margin:auto;
     text-align: center;
+    color: color($colors, lightinnercard,base);
+}
+button{
+    color: color($colors, lightinnercard,base);
+    background-color: color($colors, lightinnercard,base);
+}
+.ion-item{
+    background: color($colors, lightinnercard,base);
+    color: color($colors, innercard, base);
 }

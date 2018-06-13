@@ -4,13 +4,14 @@
     text-align: center;
 }
 button{
-    text-align:center;
-}
-.body{
-    background-color: rgb(25, 185, 60);
+    text-align:center; 
 }
 header{
-    background-color:white;
+    background-color:color($colors, lightinnercard,base);
     border-radius: 5px;
     margin:0% 20%;
+    color: color($colors, innercard,base);
+}
+h1{
+    text-decoration: none;
 }
