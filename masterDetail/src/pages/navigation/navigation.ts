@@ -31,7 +31,6 @@ export class NavigationPage {
     this.depart = randonee.lieuDepart;
     this.etapes = randonee.etapes;
     geo.getLocation(this.positionUser);
-    this.getTracer();
   }
 
   getTracer(){
