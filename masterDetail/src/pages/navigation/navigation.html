@@ -17,13 +17,13 @@
   <div >
     <ion-list>
       <ion-item >
-        <span>{{depart.ville}} / {{depart.adresse}} / {{depart.latitude}} / {{depart.longitude}}</span>
+        <span><div id='depart'>{{depart.ville}}</div> / {{depart.adresse}} / {{depart.latitude}} lat. / {{depart.longitude}} long.</span>
       </ion-item>
       <ion-item *ngFor="let etape of etapes">
-        <span>{{etape.ville}} / {{etape.adresse}} / {{etape.latitude}} / {{etape.longitude}}</span>
+        <span><div class='step'>{{etape.ville}}</div> / {{etape.adresse}} / {{etape.latitude}} lat. / {{etape.longitude}} long.</span>
       </ion-item>
       <ion-item >
-          <span>{{arrive.ville}} / {{arrive.adresse}} / {{arrive.latitude}} / {{arrive.longitude}}</span>
+          <span><div id='arrivee'>{{arrive.ville}}</div> / {{arrive.adresse}} / {{arrive.latitude}} lat. / {{arrive.longitude}} long.</span>
       </ion-item>
     </ion-list>
   </div>
