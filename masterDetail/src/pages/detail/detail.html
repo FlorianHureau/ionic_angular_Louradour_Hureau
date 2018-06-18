@@ -11,9 +11,6 @@
   </ion-navbar>
 
 </ion-header>
-
-
-
 <ion-content padding class='body'>
   <ion-card class='card'>
     <ion-card-header>
@@ -39,6 +36,9 @@
             <ion-icon name='bicycle' item-start large></ion-icon>
             {{randonee.distance}} km
           </span>
+        </ion-item>
+        <ion-item class="ion-item">
+          <p>Naviguer</p>
           <button ion-button icon-left clear item-end (click)="gotoRandoneeCour()">
             <ion-icon name="navigate"></ion-icon>
             Start
