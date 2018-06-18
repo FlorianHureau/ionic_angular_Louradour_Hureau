@@ -30,14 +30,30 @@
   <div >
     <ion-list>
       <ion-item >
-        <span>{{depart.ville}} / {{depart.adresse}} / {{depart.latitude}} / {{depart.longitude}}</span>
+        <span><div id='depart'>{{depart.ville}}</div> / {{depart.adresse}} / {{depart.latitude}} lat. / {{depart.longitude}} long.</span>
       </ion-item>
       <ion-item *ngFor="let etape of etapes">
-        <span>{{etape.ville}} / {{etape.adresse}} / {{etape.latitude}} / {{etape.longitude}}</span>
+        <span><div class='step'>{{etape.ville}}</div> / {{etape.adresse}} / {{etape.latitude}} lat. / {{etape.longitude}} long.</span>
       </ion-item>
       <ion-item >
-          <span>{{arrive.ville}} / {{arrive.adresse}} / {{arrive.latitude}} / {{arrive.longitude}}</span>
+          <span><div id='arrivee'>{{arrive.ville}}</div> / {{arrive.adresse}} / {{arrive.latitude}} lat. / {{arrive.longitude}} long.</span>
       </ion-item>
     </ion-list>
   </div>
+<<<<<<< HEAD
+=======
+  <div>
+    <agm-map [latitude]= positionUser[0] [longitude]= positionUser[1]>
+      <agm-marker [latitude]= depart.latitude [longitude]= depart.longitude ></agm-marker>
+      <div *ngFor="let etape of etapes" >
+        <agm-marker [latitude]= etape.latitude [longitude]= etape.longitude></agm-marker>
+      </div>
+      <agm-marker [latitude]= arrive.latitude [longitude]= arrive.longitude></agm-marker>
+      <agm-marker [latitude]= positionUser[0] [longitude]= positionUser[1]></agm-marker>
+      <div *ngFor="let trace of tracer">
+          <agm-direction [origin]='{ lat: trace[0], lng: trace[1] }' [destination]='{ lat: trace[2], lng: trace[3] }'></agm-direction>
+      </div>
+    </agm-map>
+  </div>
+>>>>>>> aa602a44c0245599278579ed733b5ed0d897f6e4
 </ion-content>
