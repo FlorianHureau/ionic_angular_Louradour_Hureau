@@ -20,21 +20,21 @@
       <ion-item class='ion-item'>
           <ion-icon name='walk' item-start large></ion-icon>
           <h2>Départ:</h2>
-          <p>{{randonee.lieuDepart.ville}}</p>
+          <p id='lieudepart'>{{randonee.lieuDepart.ville}}</p>
         </ion-item>
         <ion-item class='ion-item'>
             <ion-icon name='flag' item-start large></ion-icon>
             <h2>Arrivée:</h2>
-            <p>{{randonee.lieuArrivee.ville}}</p>
+            <p id='lieuarrivee'>{{randonee.lieuArrivee.ville}}</p>
         </ion-item>
         <ion-item class='ion-item'>
           <span item-left>
             <ion-icon name='stopwatch' item-start large></ion-icon>
-            {{randonee.duree}} minutes
+            <p id='minutes'>{{randonee.duree}} minutes</p>
           </span>
           <span item-left>
             <ion-icon name='bicycle' item-start large></ion-icon>
-            {{randonee.distance}} km
+            <p id='distance'>{{randonee.distance}} km</p>
           </span>
         </ion-item>
         <ion-item class="ion-item">
