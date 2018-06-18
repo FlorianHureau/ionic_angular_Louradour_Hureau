@@ -87,4 +87,5 @@
     <engine name="android" spec="~7.0.0" />
     <allow-navigation href="http://192.168.190.1:8100" />
     <allow-navigation href="http://172.27.64.67:8100" />
+    <plugin name="cordova-plugin-geofence" spec="^0.7.0" />
 </widget>

@@ -19,7 +19,7 @@ export class NavigationPage {
   
   private depart : Lieu;
   private arrive : Lieu;
-  private etapes : Array<Lieu>;
+  private etapes : Array<Lieu>=[];
   private positionUser = [0,0];
   private tracer= [];
   
@@ -31,6 +31,7 @@ export class NavigationPage {
     this.depart = randonee.lieuDepart;
     this.etapes = randonee.etapes;
     geo.getLocation(this.positionUser);
+
   }
 
   getTracer(){
@@ -44,6 +45,7 @@ export class NavigationPage {
     }
     this.tracer.push([this.etapes[this.etapes.length-1].getLatitude,this.etapes[this.etapes.length-1].getLongitude,this.arrive.getLatitude,this.arrive.getLongitude]);
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NavigationPage');
