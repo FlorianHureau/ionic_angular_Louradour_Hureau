@@ -23,7 +23,8 @@ describe('J\'accède à la liste des rando', function() {
     document.getElementById('map').click();
     it('Vérifie les informations géographiques',function(){
         var depart = document.getElementById('depart');
-        var arrivee= document.getElementById('arrivee');
+        var arrivee = document.getElementById('arrivee');
         var steps = document.getElementsByClassName('step');
+        expect(depart.not.toBe(null) && arrivee.not.toBe(null) && steps.not.contains(null));
     });
-})
+});
