@@ -21,6 +21,7 @@ import { LieuRepository } from '../repository/lieuRepository';
 import { GeolocalisationProvider } from '../providers/geolocalisation/geolocalisation';
 import { GeofenceProvider } from '../providers/geolocalisation/geofence';
 import { DataProvider } from '../providers/data/data';
+import { TimerProvider } from '../providers/timer/timer';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { DataProvider } from '../providers/data/data';
     GeofenceProvider,
     Geolocation,
     DataProvider,
+    TimerProvider,
   ]
 })
 export class AppModule {}
